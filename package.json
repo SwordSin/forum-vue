@@ -9,6 +9,7 @@
     "lint:css": "stylelint src/**/*.{vue,scss,css,sass}"
   },
   "dependencies": {
+    "element-plus": "^1.2.0-beta.6",
     "vue": "^3.2.16",
     "vue-router": "^4.0.1"
   },
