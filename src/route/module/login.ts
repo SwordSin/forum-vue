@@ -1,7 +1,7 @@
 const loginRouter = {
     path: '/login',
     component: () => import('@/view/login/Login.vue'),
-    name: 'DynamicTable',
+    name: 'Login',
 }
 
 export default loginRouter

@@ -1,8 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Search } from '@element-plus/icons-vue'
+import { useRouter } from 'vue-router'
 
 const input2 = ref('')
+const router = useRouter()
+
+const routerRedirect = (path: string) => {
+    router.push({
+        path,
+    })
+}
 
 </script>
 
@@ -11,20 +19,20 @@ const input2 = ref('')
         <el-col class="col-style" :span="3" :offset="2">
             <img class="logo" src="@/assets/v2ex@2x.png" alt="">
         </el-col>
-        <el-clo class="col-style" :span="3">
+        <el-col class="col-style" :span="3">
             <el-input
                 v-model="input2"
                 placeholder="输入想要搜索的内容"
                 :prefix-icon="Search"
             />
-        </el-clo>
+        </el-col>
         <el-col :span="6" :offset="10">
             <el-menu
                 mode="horizontal"
             >
-                <el-menu-item index="1">首页</el-menu-item>
-                <el-menu-item index="2">注册</el-menu-item>
-                <el-menu-item index="3">登录</el-menu-item>
+                <el-menu-item index="1" @click="routerRedirect('/home')">首页</el-menu-item>
+                <el-menu-item index="2" @click="routerRedirect('/register')">注册</el-menu-item>
+                <el-menu-item index="3" @click="routerRedirect('/login')">登录</el-menu-item>
             </el-menu>
         </el-col>
     </el-row>
