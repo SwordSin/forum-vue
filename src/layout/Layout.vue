@@ -7,6 +7,7 @@ const input2 = ref('')
 const router = useRouter()
 
 const routerRedirect = (path: string) => {
+    console.log(path)
     router.push({
         path,
     })
